@@ -11,6 +11,7 @@ def pfArtimetico(Puc, Pci, Tuc, Tci, Tf) :
     return puf
 
 
+#geometrico
 def pfGeometrico(Puc, Pci, Tuc, Tci, Tf) :
 
     r= ((Puc/Pci)**(1/(Tuc-Tci)))-1

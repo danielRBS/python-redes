@@ -1,6 +1,10 @@
+#importa la libreria de pandas
 import pandas as pd
 
+#leer el archivo .csv y guardarlo como un dataframe en una variable
 dfPob= pd.read_csv('censo.csv',sep=';')
+
+#generar las funciones 
 def pfArtimetico(df, Tf) :
     k=0
     for i in range(df.index.size - 1):
