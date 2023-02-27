@@ -56,7 +56,7 @@ def pfWappus(df, Tf):
      i=i/(df.index.size -1)
      inPob=df.iloc[0]
      if((i*(Tf-inPob.iloc[0]))<200):
-          pf=inPob.iloc[1]*((200+(i*(Tf-inPob.iloc[0])))/(200-(i*(Tf-inPob.iloc[0]))))
+          pf=round(inPob.iloc[1]*((200+(i*(Tf-inPob.iloc[0])))/(200-(i*(Tf-inPob.iloc[0])))))
      else:
         pf="no se puede aplicar este metodo"
      return pf
