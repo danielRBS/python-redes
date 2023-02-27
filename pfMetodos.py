@@ -28,8 +28,19 @@ def pfExponecial(Puc, Pca, Tuc, Tca, Tf,Pci, Tci):
     pf= Pci * np.exp(k*(Tf-Tci))
     return pf
 
+#wappus
+def pfWappus(Puc, Pci, Tuc, Tci, Tf):
+
+    i=200*(Puc-Pci)/((Tuc-Tci)*(Pci+Puc))
+    if((i*(Tf-Tci))<200):
+        pf=Pci*((200+(i*(Tf-Tci)))/(200-(i*(Tf-Tci))))
+    else:
+        pf="no se puede aplicar este metodo"
+    return pf
+
+
 #print(pfArtimetico(4000,200,2005,1950,2039))
 print(pfArtimetico(2806,1067,2005,1938,2022))
 print(pfGeometrico(2806,1067,2005,1938,2022))
 print(pfExponecial(2806,2440,2005,1993,2022,1067,1938))
-
+print(pfWappus(2806,1067,2005,1938,2022))
